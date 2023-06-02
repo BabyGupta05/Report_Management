@@ -1,7 +1,7 @@
 # REPORT MANAGEMENT APP
 
 
-A full-stack app for mange report using the MERN stack and MVC architecture.
+A full-stack app for manage report using the MERN stack and MVC architecture.
 
 ## Tech Stack
 

@@ -56,7 +56,7 @@ const Signup = () => {
     };
   return (
     <div>
-      <h3>Registe subordinates</h3>
+      <h3>Register subordinates</h3>
       <form className="form" onSubmit={handleSubmit}>
         <input type="text" placeholder="First Name" value={signUpData.fname} onChange={(e)=>setsignUpData({...signUpData,fname:e.target.value})}/>
         <input type="text" placeholder="Last Name" value={signUpData.lname} onChange={(e)=>setsignUpData({...signUpData,lname:e.target.value})}/>
