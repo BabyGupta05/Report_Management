@@ -4,17 +4,21 @@ const reportSchema=new mongoose.Schema({
         type: Date,
         required: true
       },
-      heading: {
+      title: {
         type: String,
         required: true
       },
-      note: {
+      issue: {
         type: String,
         required: true
       },
       email:{
         type:String,
         required:true
+      },
+      reportTo:{
+        type:String,
+        required:true,
       }
 })
 

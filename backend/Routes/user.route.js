@@ -24,7 +24,9 @@ userRouter.post("/login", async (req, res) => {
         fname: user.fname,
         lname: user.lname,
         email: user.email,
+        role:user.role,
         token: token,
+        reportTo:user.reportTo
       });
       console.log("login success");
     } else {
@@ -36,6 +38,7 @@ userRouter.post("/login", async (req, res) => {
 userRouter.post("/signup", async (req, res) => {
   try {
     const { fname, lname, email, password, role, reportTo } = req.body;
+    
     const user = await userModel.findOne({ email });
     if (user) {
       return res.status(400).send({ message: "Email already exists" });

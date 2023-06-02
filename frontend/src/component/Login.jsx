@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from 'axios'
-
+import {useNavigate} from 'react-router-dom'
 const Login = () => {
- 
+    const navigate=useNavigate();
     const [loginData,setLoginData]=useState(
        { email:"",
         password:""}
@@ -11,9 +11,18 @@ const Login = () => {
       e.preventDefault();
       try {
         const res=await axios.post('http://localhost:8080/user/login',loginData);
-        console.log(res);
-        localStorage.setItem("token",res.data.token);
-        
+        console.log(res.data);
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("role", res.data.role);
+        localStorage.setItem("reportTo", res.data.reportTo);
+        localStorage.setItem("email", res.data.email);
+        if(res.data.role=="manager"){
+          navigate("/register");
+        }else if(res.data.role=="lead"){
+          navigate("/register");
+        }else if(res.data.role=="developer"){
+          navigate('/reportIssue');
+        }
       } catch (error) {
         console.log(error)
       }
