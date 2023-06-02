@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Navigate } from 'react-router-dom';
 
-function PrivateRoute({children}) {
+function DeveloperPrivate({children}) {
     const token=localStorage.getItem("token")
     const role=localStorage.getItem("role")
    
-    if(token && (role=="manager" || role=="lead")) {
+    if(token && (role=="developer")) {
         return children
     }
    
@@ -15,4 +15,4 @@ function PrivateRoute({children}) {
     );
 }
 
-export default PrivateRoute;
+export default DeveloperPrivate;

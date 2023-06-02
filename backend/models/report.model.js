@@ -8,7 +8,7 @@ const reportSchema=new mongoose.Schema({
         type: String,
         required: true
       },
-      issue: {
+      report: {
         type: String,
         required: true
       },
