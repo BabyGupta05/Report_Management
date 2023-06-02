@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="header">
       <header >
-      <h1> REPORT APP</h1>
+      <h1> REPORT MANAGEMENT APP</h1>
       </header>
     <Router/>
     </div>
