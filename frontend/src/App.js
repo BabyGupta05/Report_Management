@@ -4,9 +4,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="header">
       <header >
-       REPORT App
+      <h1> REPORT APP</h1>
       </header>
     <Router/>
     </div>
