@@ -17,9 +17,9 @@ const Login = () => {
         localStorage.setItem("reportTo", res.data.reportTo);
         localStorage.setItem("email", res.data.email);
         if(res.data.role=="manager"){
-          navigate("/register");
+          navigate("/reportee");
         }else if(res.data.role=="lead"){
-          navigate("/register");
+          navigate("/reportee");
         }else if(res.data.role=="developer"){
           navigate('/reportIssue');
         }

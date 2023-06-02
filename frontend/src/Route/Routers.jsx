@@ -5,6 +5,7 @@ import Signup from "../component/Signup";
 import PrivateRoute from "./PrivateRoute";
 import Report from "../component/Report";
 import DeveloperPrivate from "./DeveloperPrivate";
+import SubordinateReport from "../component/SubordinateReport";
 const Router = () => {
   return (
     <Routes>
@@ -14,6 +15,14 @@ const Router = () => {
         element={
           <PrivateRoute>
             <Signup />
+          </PrivateRoute>
+        }
+      ></Route>
+      <Route
+        path="/reportee"
+        element={
+          <PrivateRoute>
+            <SubordinateReport />
           </PrivateRoute>
         }
       ></Route>
