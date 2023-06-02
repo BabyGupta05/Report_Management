@@ -3,7 +3,7 @@ const  mongoose = require('mongoose');
 //Set up default mongoose connection
 const DBConnect = async()=>{
     try {
-        await mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+        await mongoose.connect(process.env.DATABASE_URL);
         console.log("Db Connected")
     } catch (error) {
         console.log({error});
